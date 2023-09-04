@@ -21,9 +21,13 @@ module.exports = async function () {
       version: getVersion(),
     },
 
-    // Specify linux target just for disabling snap compilation
-    linux: {
-      target: 'deb',
+    // more win options https://www.electron.build/configuration/win
+    win: {
+      target: ['nsis'],
+    },
+    // more nsis options https://www.electron.build/configuration/nsis
+    nsis: {
+      oneClick: false,
     },
   };
 };
